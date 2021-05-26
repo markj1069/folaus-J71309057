@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-. bin/OLSLIB
-. bin/filexsf.sh
+. lib/OLSLIB
+. lib/filexsf.sh
 
 function add {
     echo "!-h- $1" >>lib/olaus.f90 # Add the header
@@ -32,7 +32,7 @@ add diag.f90
 add errmsg.f90
 add fail.f90
 add getrc.f90
-add getsys.f90
+add olsgetsys.f90
 add is.f90
 add isnot.f90
 add ok.f90
@@ -47,6 +47,10 @@ add olswrite.f90
 add pass.f90
 add setrc.f90
 add tst_plan.f90
+add date_stamp.f90
+add skip.f90
+add time_stamp.f90
+add todo.f90
 
 cat >>lib/olaus.f90 <<'/*'         # Terminate Olaus Module
 

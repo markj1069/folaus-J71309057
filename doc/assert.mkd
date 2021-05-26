@@ -1,0 +1,105 @@
+# NAME routine
+
+Title Line
+
+% title **routine**&mdash;Title Line.
+% author Mark Jensen
+% date 10 MAY 2021
+
+## SYNOPSIS
+
+CALL ROUTINE(ARG1, ARG2, ARG3, ARG4)
+
+## Description
+
+Paragraph to describe the functioon of ROUTINE.
+
+The pseudocode for this function is:
+
+```pseudocode
+if ! var1 op var2 then
+    print "Assertion Fail."
+    exit with assert fail
+```
+
+### ARGUMENTS
+
+* *ARG1* &mdash; Argument 1 (required)
+* *ARG2* &mdash; Augument 2 (required)
+* *ARG3* &mdash; Augument 3 (required)
+* *ARG4* &mdash; Argument 4 (required)
+
+
+## EXAMPLES
+
+### One
+
+```fortran
+    
+```
+
+results in
+
+```console
+    Assertion failed:  "5 -lt 4", File "ex1.sh", line 14
+```
+
+on stderr.
+
+### Two
+
+```bash
+    source $OLSLIB
+    declare -i x=8
+    declare -i y=4
+
+    assert "$x" "-ge" "0" $LINENO
+    assert "$y" "-le" "0" $LINENO
+```
+
+results in
+
+```console
+    Assertion failed:  "4 -le 0", File "ex2.sh", line 8
+```
+
+on stderr.
+
+## Notes
+
+## Cavets
+
+## Diagnostics
+
+assert: missing argument 1, var1
+
+assert: missing argument 2, op
+
+assert: missing argument 3, var2
+
+assert: missing argument 4, line_no
+
+Assertion failed:
+
+## Dependencies
+
+The global variable $OLSLIB needs to be set to your installations Olaus Script Library
+and sourced before this function executes.
+The default location is _/usr/local/lib/olaus/olslib_.
+
+## VERSION
+
+Version 0.0.0 14 SEP 2006 Initial Release
+
+## Author
+
+[Mark Jensen](mailto:mark@jensen.net)
+
+## History
+
+## Resources
+
+Mendel Cooper, *Advanced Bash-Scripting Guide*, Revision 4.0, 2006-06-18.
+
+Wikipedia, *Assertion (computing)*,
+[http://en.wikipedia.org/wiki/Assertion_(computing)](http://en.wikipedia.org/wiki/Assertion_(computing))
