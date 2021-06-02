@@ -1,5 +1,5 @@
 !   Fail this test.
-    subroutine fail( tst_name )
+    subroutine olf_fail( tst_name )
     implicit none
 
     ! Argument
@@ -11,6 +11,6 @@
 
     write( ctsts, '(i10)' ) TST_COUNT
 
-    write( *, '(a,a,a,a)' ) "not ok - ", trim(adjustl(ctsts)), " ", trim(tst_name)
+    write( *, '(4a)' ) "not ok - ", trim(adjustl(ctsts)), " ", trim(tst_name)
 
-    end subroutine fail
+    end subroutine olf_fail

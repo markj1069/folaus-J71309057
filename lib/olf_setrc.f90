@@ -1,5 +1,5 @@
 !   Set system return code
-    subroutine setrc( rc )
+    subroutine olf_set_rc( rc )
     implicit none
 
       ! Argument
@@ -10,4 +10,4 @@
             RC_CODE = rc
         end if
 
-    end subroutine setrc
+    end subroutine olf_set_rc

@@ -1,5 +1,5 @@
-!   process time_stamp
-    subroutine time_stamp( ts )
+!   process olf_time_stamp
+    subroutine olf_time_stamp( ts )
         implicit none
     ! Arguments
         character( 6 )                :: time  ! HHMMSS
@@ -9,4 +9,4 @@
 
         ts = time(1:2) // ":" // time(3:4) // ":" // time(5:6)
 
-    end subroutine time_stamp
+    end subroutine olf_time_stamp

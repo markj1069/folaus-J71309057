@@ -1,11 +1,11 @@
 !   Exit this Fortran Program while setting the Return Code
-subroutine olsend
+subroutine olf_end
 implicit none
 
    integer :: rcc
 
 !  Set the return code.
-   call getrc( rcc )
+   call olf_get_rc( rcc )
    call exit( rcc )
 
-end subroutine olsend
+end subroutine olf_end

@@ -49,18 +49,22 @@
 
   ! Command Variables
 
+    character( 3 ), private   :: OLFPGMID = "OLF"
+
   ! Command File Names can be at most 256 characters long.
     character(256), private   :: OLSLOGFILE = "logfile.txt"  ! Default logfile name.
     character(256), private   :: OLSINFILES(256)   ! Only supports 256 input files.
     character(256), private   :: OLSOUTPUT  ! Output file, default STDOUT
 
-
-    integer,        private   :: OLSVERBOSE        ! Verbose option
+integer,        private   :: OLFWRITELVL
+integer,        private   :: OLSVERBOSE        ! Verbose option
     integer,        parameter :: OLSQUITE   = 0    ! -q | --quiet | --verbose=0
     integer,        parameter :: OLSNORMAL  = 1    ! Default, --verbose=1
     integer,        parameter :: OLSVERB    = 2    ! -v | --verbose | --verbose=2
     integer,        private   :: OLSLOG            ! Log option
     integer,        parameter :: OLSNOLOG   = 0    ! Default to nolog file
     integer,        parameter :: OLSNORLOG  = 1    ! --log=[logfile]
-    
-    
+
+    logical,        private   :: OLSWRITEOUT = .true.   ! Write to STDOUT
+    logical,        private   :: OLSWRITEERR = .false.  ! Write to STDOUT
+    logical,        private   :: OSLWRITELOG = .false.  ! Write to STDLOG

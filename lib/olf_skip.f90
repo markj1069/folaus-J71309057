@@ -1,5 +1,5 @@
 !   skip this test.
-    subroutine skip( tst_name )
+    subroutine olf_skip( tst_name )
     implicit none
 
     ! Argument
@@ -11,6 +11,6 @@
 
     write( ctsts, '(i10)' ) TST_COUNT
 
-    call pass( "# SKIP " // tst_name)
+    call olf_pass( "# SKIP " // tst_name)
 
-    end subroutine skip
+    end subroutine olf_skip
