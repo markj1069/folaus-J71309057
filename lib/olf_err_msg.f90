@@ -13,8 +13,8 @@
         integer                   :: rcc      ! What is the current return code.
         character(256)            :: err_msg  ! Constructed 
         
-        call olf_bld_msg( err_msg, prefix, err_no, rc, msg )
-        write( STDERR, '(a)' ) err_msg
+        call olf_bld_msg( err_msg, prefix, err_no, rc, trim(msg) )
+        write( STDERR, '(a)' ) trim(err_msg)
 
         call olf_get_rc( rcc )       ! Get the current return code.
         if( rcc >= RC_FATAL ) then   ! If the return code if fatal

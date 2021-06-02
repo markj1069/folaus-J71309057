@@ -80,12 +80,12 @@ OBJ =  olf_module.f90 olf_def.f90 olf_contains.f90 \
     olf_done_testing.f90 olf_end.f90 olf_err_msg.f90 olf_fail.f90 \
     olf_get_rc.f90 olf_get_sys.f90 olf_help.f90 olf_input.f90 \
     olf_is.f90 olf_isnt.f90 olf_log.f90 olf_man.f90 olf_note.f90 \
-    olf_ok.f90 olf_pass.f90 olf_setrc.f90 olf_skip.f90 olf_skip_all.f90 \
+    olf_ok.f90 olf_pass.f90 olf_set_rc.f90 olf_skip.f90 olf_skip_all.f90 \
     olf_time_stamp.f90 olf_todo.f90 olf_tst_plan.f90 olf_usage.f90 \
     olf_version.f90 olf_write.f90 olf_end_module.f90
 
 olflib.f90: $(OBJ)
-	rm --force olslib.f90
+	rm --force olflib.f90
 	../bin/add.sh olf_module.f90
 	../bin/add.sh olf_def.f90
 	../bin/add.sh olf_contains.f90
@@ -110,7 +110,7 @@ olflib.f90: $(OBJ)
 	../bin/add.sh olf_note.f90
 	../bin/add.sh olf_ok.f90
 	../bin/add.sh olf_pass.f90
-	../bin/add.sh olf_setrc.f90
+	../bin/add.sh olf_set_rc.f90
 	../bin/add.sh olf_skip.f90
 	../bin/add.sh olf_skip_all.f90
 	../bin/add.sh olf_time_stamp.f90
