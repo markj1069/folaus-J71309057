@@ -8,4 +8,4 @@ XF=$( filexsf  "$FN" )
 FP=$( filepath "$FN" )
 EX="$XF.exe"
 
-gfortran -I "lib" -o "$EX" "$FN" lib/olaus.o
+gfortran -I "lib" -o "$EX" "$FN" lib/olflib.o
