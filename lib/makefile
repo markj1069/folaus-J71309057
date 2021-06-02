@@ -64,9 +64,6 @@ all: olflib.a
 .PHONY: distclean
 
 
-echo:
-	@echo "This is the default action."
-
 clean maintainer-clean distclean:
 	rm --force a.out *.exe *.html *.mod *.o *.pdf *.txt olflib.a olflib.f90
 
